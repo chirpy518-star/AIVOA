@@ -1,57 +1,195 @@
-/* Basic layout and small form styles */
-.complaint-page {
-  max-width: 960px;
-  margin: 24px auto;
-  padding: 16px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+body{
+margin:0;
+background:#f4f7fb;
+font-family:Inter,sans-serif;
 }
 
-.complaint-grid {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 20px;
-  align-items: start;
+.page{
+
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+padding:25px;
+
 }
 
-.assistant {
-  background: #f7f9fc;
-  border: 1px solid #e6eef8;
-  padding: 12px;
-  border-radius: 6px;
+.formCard,
+.assistant{
+
+background:white;
+
+border-radius:12px;
+
+padding:20px;
+
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+
 }
 
-.complaint-form .label {
-  font-weight: 600;
-  margin-bottom: 6px;
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
 }
 
-.input, .textarea, .select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #d1dbe8;
-  border-radius: 4px;
-  margin-bottom: 12px;
-  box-sizing: border-box;
+.badge{
+
+background:#fff4d5;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:13px;
+
 }
 
-.form-actions {
-  margin-top: 8px;
+.grid2{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+margin-bottom:15px;
+
 }
 
-button {
-  padding: 8px 14px;
-  border: none;
-  background: #0366d6;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:10px;
+
+border:1px solid #d8dee7;
+
+border-radius:8px;
+
+box-sizing:border-box;
+
 }
 
-button:hover { opacity: 0.95; }
+.buttons{
 
-.progress-root { margin-top: 12px; display:flex; align-items:center; gap:8px; }
-.progress-track { flex:1; height:10px; background:#e9eef6; border-radius:6px; overflow:hidden; }
-.progress-fill { height:100%; background:#2ea44f; transition: width 300ms ease; }
-.progress-label { min-width:36px; text-align:right; font-size:12px; color:#333; }
+display:flex;
 
-.upload-box input[type="file"] { margin-top:8px; }
+justify-content:space-between;
+
+margin-top:20px;
+
+}
+
+button{
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.primary{
+
+background:#2962ff;
+
+color:white;
+
+}
+
+.uploadBox{
+
+border:2px dashed #cfd8e3;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:10px;
+
+}
+
+.progress{
+
+background:#e8edf5;
+
+height:10px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin:10px 0;
+
+}
+
+.fill{
+
+background:#2d7ef7;
+
+height:100%;
+
+}
+
+.assistantBox{
+
+background:#edf4ff;
+
+padding:15px;
+
+border-radius:10px;
+
+margin:20px 0;
+
+}
+
+.chat{
+
+display:flex;
+
+gap:10px;
+
+}
+
+.chat input{
+
+flex:1;
+
+}
+
+.beta{
+
+background:#eef2ff;
+
+color:#2563eb;
+
+padding:2px 8px;
+
+border-radius:12px;
+
+font-size:12px;
+
+margin-left:10px;
+
+}
+
+@media(max-width:1000px){
+
+.page{
+
+grid-template-columns:1fr;
+
+}
+
+}
