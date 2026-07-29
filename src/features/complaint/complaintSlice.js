@@ -1,28 +1,50 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  submissions: [],
-  progress: 0,
+
+    complaintSource:"",
+    customerName:"",
+    productName:"",
+    productStrength:"",
+    batchLotNumber:"",
+    manufacturingDate:"",
+    expiryDate:"",
+    quantityAffected:"",
+    complaintType:"",
+    complaintDate:"",
+    description:"",
+    initialSeverity:"",
+    priority:"",
+    progress:10,
+    status:"Pending Triage"
+
 };
 
-const complaintSlice = createSlice({
-  name: 'complaint',
-  initialState,
-  reducers: {
-    submitComplaint(state, action) {
-      state.submissions.push({
-        ...action.payload,
-        createdAt: new Date().toISOString(),
-      });
-    },
-    setProgress(state, action) {
-      state.progress = action.payload;
-    },
-    clearSubmissions(state) {
-      state.submissions = [];
-    },
-  },
+const complaintSlice=createSlice({
+
+    name:"complaint",
+
+    initialState,
+
+    reducers:{
+
+        updateField:(state,action)=>{
+
+            const {field,value}=action.payload;
+            state[field]=value;
+
+        },
+
+        resetForm:()=>initialState,
+
+        setProgress:(state,action)=>{
+            state.progress=action.payload;
+        }
+
+    }
+
 });
 
-export const { submitComplaint, setProgress, clearSubmissions } = complaintSlice.actions;
+export const {updateField,resetForm,setProgress}=complaintSlice.actions;
+
 export default complaintSlice.reducer;
