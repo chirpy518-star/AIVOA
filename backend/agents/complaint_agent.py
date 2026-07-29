@@ -1,10 +1,11 @@
-from services.extractor_service import extract_complaint_fields
+from llm.gemma import gemma_extract
+
 
 def extract_fields(state):
 
     text = state["text"]
 
-    complaint = extract_complaint_fields(text)
+    complaint = gemma_extract(text)
 
     state["complaint"] = complaint
 
