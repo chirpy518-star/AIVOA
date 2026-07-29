@@ -1,12 +1,7 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import ComplaintPage from './pages/ComplaintPage';
+import ComplaintPage from "./pages/ComplaintPage";
 
-export default function App() {
-  return (
-    <Provider store={store}>
-      <ComplaintPage />
-    </Provider>
-  );
+function App() {
+    return <ComplaintPage />;
 }
+
+export default App;
